@@ -1,0 +1,11 @@
+<ni-card [title]="'Disciplinas do Ciclo Básico'">
+  <md-nav-list>
+    <md-list-item *ngFor="let link of links">
+      <a md-line href="#">{{ link }}</a>
+      <button md-icon-button (click)="showInfo(link)">
+        <md-icon>info</md-icon>
+      </button>
+    </md-list-item>
+  </md-nav-list>
+</ni-card>
+

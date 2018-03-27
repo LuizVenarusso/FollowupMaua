@@ -1,0 +1,17 @@
+<ni-card [title]="'Recuperar senha'" [align]="'center'">
+  <form (ngSubmit)="onSubmit()">
+    <md-input-container>
+      <input mdInput placeholder="Email" value="">
+    </md-input-container>
+
+    <p class="text-left small">Entre com seu e-mail cadastrado e enviaremos um e-mail com um link para recadastrar a senha.</p>
+
+    <button md-raised-button color="primary" type="submit">Reset</button>
+
+    <div class="additional-info">
+      <a href="#/extra-layout/sign-in-social">Sign In</a>
+      <span class="divider"></span>
+      <a href="#/extra-layout/sign-up">Sign up</a>
+    </div>
+  </form>
+</ni-card>

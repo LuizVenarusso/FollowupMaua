@@ -1,0 +1,39 @@
+<ni-card [title]="''" [align]="'center'">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <img src="assets/img/logo-compress.png" alt="" width="200" height="200" class="logo-img">
+
+      <div class="form-group">
+
+    <md-input-container>
+      <input mdInput placeholder="Usuário" id="email" formControlName="email" value="" class="form-control">
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+      </div>  
+    </md-input-container>
+      </div>
+
+      <div class="form-group">
+    <md-input-container>
+      <input mdInput placeholder="Senha" type="password" id="senha" formControlName="senha" value="" class="form-control">
+      <div *ngIf="senha.touched && senha.invalid" class="alert alert-danger">
+        </div>  
+    </md-input-container>
+      </div>
+      
+    <div class="text-left mb-module">
+      <md-checkbox>
+        Lembrar Senha
+      </md-checkbox>
+    </div>
+
+    <button md-raised-button color="primary" type="submit" class="submit">Entrar</button>
+
+  <!--  <div class="social-divider">Fazer login com</div> -->
+
+    <div class="additional-info">
+      <a href="#/extra-layout/sign-up">Cadastrar</a>
+      <span class="divider"></span>
+      <a href="#/extra-layout/forgot">Esqueci minha senha</a>
+    </div>
+  </form>
+</ni-card>

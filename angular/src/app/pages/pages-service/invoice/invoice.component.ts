@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../../layouts/shared-service';
+
+
+@Component({
+  selector: 'page-invoice',
+  templateUrl: './invoice.component.html',
+  styleUrls: ['./invoice.component.scss']
+})
+export class PageInvoiceComponent implements OnInit {
+  pageTitle: string = 'Contato';
+
+  constructor( private _sharedService: SharedService ) {
+    this._sharedService.emitChange(this.pageTitle);
+  }
+
+  ngOnInit() {}
+}
